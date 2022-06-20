@@ -15,4 +15,4 @@ Then some more natural language processing or machine learning specific packages
   #. nltk
   #. vaderSentiment
 
-
+If you're using PyCharm installing these is easy to do. In the bottom-right corner of the screen it will says something like "Python 3.9" to tell you which Python interpreter PyCharm is using. If you click on this, then on "Interpreter Settings" in the menu that pops up, it will list the packages installed. At the bottom of this list there will be a "+" symbol that allows you to install new packages. If you click the "+" button, it will bring up a list of available packages, and you can search by name for the packages listed above, and it will automatically install for you.
