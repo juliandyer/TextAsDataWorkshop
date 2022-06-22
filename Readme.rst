@@ -10,7 +10,10 @@ For this workshop I'll be working through some tools in Python 3, specifically P
 
 This workshop is aimed at people who aren't familiar with text-as-data tools yet, and who ideally have a bit of experience with Python, but even beginners to Python will be able to follow along. The goal is to introduce some of the most common Natural Language Processing tools and give a few examples that can be a jumping off point for applications in your own work.
 
+
 **Some additional instructions I should have added for a first-time install**
+'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+
 When you open PyCharm for the first time, you may need to install Python. If you click "New Project" from the home page, it will ask you what interpreter you want to use. The simplest option is probably to select "Previously Configured Interpreter" then choose "System Interpreter" and then select "Python 3.9" from the drop-down menu. You may need to install Python and give authorization for it to download/install. The other way to do this is to select "New environment using Virtualenv" which will create an isolated Python environment where you can install these packages without messing up any other python packages you might have installed (e.g. if you've installed another package elsewhere that requires a specific version of numpy, that might stop working if you install the default). 
 
 Once you've got Python installed and ready to go, there are a few packages we'll go through that you need to install. There are a few basic general-use Python libraries you'll need to install:
