@@ -7,6 +7,7 @@ Pandas and Loading text data in a CSV file:
 '''
 import pandas as pd
 UKHansard_1960_1962 = pd.read_csv('UK_Hansard_1960_1962_sample.csv')
+print(UKHansard_1960_1962.head())
 
 '''
 Cleaning text:
@@ -16,13 +17,12 @@ nltk.download('punkt')
 nltk.download('stopwords')
 from nltk.corpus import stopwords
 stop_words = set(stopwords.words('english'))
-
 hansard_stopwords = ['hon', 'member']
 
 def clean_text(input_string):
     words = nltk.word_tokenize(input_string)
-    tokens = [word for word in words if word.isalpha()]
-    tokens_lower = [token.lower() for token in tokens]
+    alpha_tokens = [word for word in words if word.isalpha()]
+    tokens_lower = [token.lower() for token in alpha_tokens]
     tokens_no_stopwords = [token for token in tokens_lower if token not in stop_words and token not in hansard_stopwords]
     clean_sentence = ' '.join(tokens_no_stopwords)
     return clean_sentence
@@ -87,7 +87,6 @@ def plot_top_words(model, feature_names, n_top_words, title):
 
     plt.subplots_adjust(top=0.90, bottom=0.05, wspace=0.90, hspace=0.3)
     plt.show()
-
 plot_top_words(lda, tf_feature_names, 10, "Topics in LDA model")
 
 lsa = lda.fit_transform(tf)
